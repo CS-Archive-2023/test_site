@@ -27,5 +27,6 @@ deploy_site:
   - website
   image: garland/aws-cli-docker   
   script:
-    - aws s3 sync ./public s3://$AWS_S3_bucket --delete --only-show-errors
+    #- aws s3 sync ./public s3://$AWS_S3_bucket --delete --only-show-errors
+    - aws s3 sync ./public s3://cscrispweb --delete --only-show-errors
     #- aws cloudfront create-invalidation --distribution-id xxxxxxxxxxxxx --paths "/*"
